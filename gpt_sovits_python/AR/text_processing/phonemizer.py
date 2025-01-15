@@ -9,7 +9,7 @@ import regex
 from gruut import sentences
 from gruut.const import Sentence
 from gruut.const import Word
-from gpt_sovits_python.AR.text_processing.symbols import SYMBOL_TO_ID
+from gpt_sovitsV2_python.gpt_sovits_python.AR.text_processing.symbols import SYMBOL_TO_ID
 
 
 class GruutPhonemizer:

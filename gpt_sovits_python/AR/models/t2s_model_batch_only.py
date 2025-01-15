@@ -2,8 +2,8 @@
 import torch
 from tqdm import tqdm
 
-from gpt_sovits_python.AR.models.utils import make_pad_mask
-from gpt_sovits_python.AR.models.utils import (
+from gpt_sovitsV2_python.gpt_sovits_python.AR.models.utils import make_pad_mask
+from gpt_sovitsV2_python.gpt_sovits_python.AR.models.utils import (
     topk_sampling,
     sample,
     logits_to_probs,
@@ -12,11 +12,11 @@ from gpt_sovits_python.AR.models.utils import (
     make_reject_y, 
     get_batch_logps
 )
-from gpt_sovits_python.AR.modules.embedding import SinePositionalEmbedding
-from gpt_sovits_python.AR.modules.embedding import TokenEmbedding
-from gpt_sovits_python.AR.modules.transformer import LayerNorm
-from gpt_sovits_python.AR.modules.transformer import TransformerEncoder
-from gpt_sovits_python.AR.modules.transformer import TransformerEncoderLayer
+from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.embedding import SinePositionalEmbedding
+from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.embedding import TokenEmbedding
+from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.transformer import LayerNorm
+from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.transformer import TransformerEncoder
+from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.transformer import TransformerEncoderLayer
 from torch import nn
 from torch.nn import functional as F
 from torchmetrics.classification import MulticlassAccuracy

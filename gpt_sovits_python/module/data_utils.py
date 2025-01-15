@@ -8,16 +8,16 @@ import torch
 import torch.utils.data
 from tqdm import tqdm
 
-from gpt_sovits_python.module import commons
-from gpt_sovits_python.module.mel_processing import spectrogram_torch
-from gpt_sovits_python.text import cleaned_text_to_sequence
-from gpt_sovits_python.utils import load_wav_to_torch, load_filepaths_and_text
+from gpt_sovitsV2_python.gpt_sovits_python.module import commons
+from gpt_sovitsV2_python.gpt_sovits_python.module.mel_processing import spectrogram_torch
+from gpt_sovitsV2_python.gpt_sovits_python.text import cleaned_text_to_sequence
+from gpt_sovitsV2_python.gpt_sovits_python.utils import load_wav_to_torch, load_filepaths_and_text
 import torch.nn.functional as F
 from functools import lru_cache
 import requests
 from scipy.io import wavfile
 from io import BytesIO
-from gpt_sovits_python.utils import load_audio
+from gpt_sovitsV2_python.gpt_sovits_python.utils import load_audio
 
 # ZeroDivisionError fixed by Tybost (https://github.com/RVC-Boss/GPT-SoVITS/issues/79)
 class TextAudioSpeakerLoader(torch.utils.data.Dataset):

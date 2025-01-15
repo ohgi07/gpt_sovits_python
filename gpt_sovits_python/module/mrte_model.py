@@ -3,7 +3,7 @@
 import torch
 from torch import nn
 from torch.nn.utils import remove_weight_norm, weight_norm
-from gpt_sovits_python.module.attentions import MultiHeadAttention
+from gpt_sovitsV2_python.gpt_sovits_python.module.attentions import MultiHeadAttention
 
 
 class MRTE(nn.Module):

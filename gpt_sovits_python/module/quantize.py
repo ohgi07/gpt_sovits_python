@@ -13,7 +13,7 @@ import typing as tp
 import torch
 from torch import nn
 
-from gpt_sovits_python.module.core_vq import ResidualVectorQuantization
+from gpt_sovitsV2_python.gpt_sovits_python.module.core_vq import ResidualVectorQuantization
 
 
 @dataclass

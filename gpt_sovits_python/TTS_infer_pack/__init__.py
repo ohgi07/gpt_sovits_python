@@ -1,1 +1,1 @@
-from . import TTS, text_segmentation_method
+from gpt_sovitsV2_python.gpt_sovits_python.TTS_infer_pack import TTS, text_segmentation_method

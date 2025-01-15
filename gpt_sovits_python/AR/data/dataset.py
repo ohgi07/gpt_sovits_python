@@ -15,7 +15,7 @@ from torch.utils.data import DataLoader
 from torch.utils.data import Dataset
 from transformers import AutoTokenizer
 
-from gpt_sovits_python.text import cleaned_text_to_sequence
+from gpt_sovitsV2_python.gpt_sovits_python.text import cleaned_text_to_sequence
 
 # from config import exp_dir
 

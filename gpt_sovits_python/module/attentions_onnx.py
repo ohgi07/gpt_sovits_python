@@ -1,9 +1,10 @@
+import logging
 import math
 import torch
 from torch import nn
 from torch.nn import functional as F
 
-from gpt_sovits_python.module import commons
+from gpt_sovitsV2_python.gpt_sovits_python.module import commons
 from module.modules import LayerNorm
 
 
