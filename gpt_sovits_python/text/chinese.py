@@ -5,9 +5,9 @@ import re
 import cn2an
 from pypinyin import lazy_pinyin, Style
 
-from gpt_sovitsV2_python.gpt_sovits_python.text.symbols import punctuation
-from gpt_sovitsV2_python.gpt_sovits_python.text.tone_sandhi import ToneSandhi
-from gpt_sovitsV2_python.gpt_sovits_python.text.zh_normalization.text_normlization import TextNormalizer
+from gpt_sovits_python.text.symbols import punctuation
+from gpt_sovits_python.text.tone_sandhi import ToneSandhi
+from gpt_sovits_python.text.zh_normalization.text_normlization import TextNormalizer
 
 normalizer = lambda x: cn2an.transform(x, "an2cn")
 

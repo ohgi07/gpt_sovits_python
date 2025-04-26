@@ -7,9 +7,9 @@ from torch.nn import functional as F
 from torch.nn import Conv1d
 from torch.nn.utils import weight_norm, remove_weight_norm
 
-from gpt_sovitsV2_python.gpt_sovits_python.module import commons
-from gpt_sovitsV2_python.gpt_sovits_python.module.commons import init_weights, get_padding
-from gpt_sovitsV2_python.gpt_sovits_python.module.transforms import piecewise_rational_quadratic_transform
+from gpt_sovits_python.module import commons
+from gpt_sovits_python.module.commons import init_weights, get_padding
+from gpt_sovits_python.module.transforms import piecewise_rational_quadratic_transform
 import torch.distributions as D
 
 

@@ -4,8 +4,8 @@ import os
 # else:
 #   from text.symbols2 import symbols
 
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols as symbols_v1
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols2 as symbols_v2
+from gpt_sovits_python.text import symbols as symbols_v1
+from gpt_sovits_python.text import symbols2 as symbols_v2
 
 _symbol_to_id_v1 = {s: i for i, s in enumerate(symbols_v1.symbols)}
 _symbol_to_id_v2 = {s: i for i, s in enumerate(symbols_v2.symbols)}

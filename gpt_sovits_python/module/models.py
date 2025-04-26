@@ -5,20 +5,20 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from gpt_sovitsV2_python.gpt_sovits_python.module import commons
-from gpt_sovitsV2_python.gpt_sovits_python.module import modules
-from gpt_sovitsV2_python.gpt_sovits_python.module import attentions
+from gpt_sovits_python.module import commons
+from gpt_sovits_python.module import modules
+from gpt_sovits_python.module import attentions
 
 from torch.nn import Conv1d, ConvTranspose1d, AvgPool1d, Conv2d
 from torch.nn.utils import weight_norm, remove_weight_norm, spectral_norm
-from gpt_sovitsV2_python.gpt_sovits_python.module.commons import init_weights, get_padding
-from gpt_sovitsV2_python.gpt_sovits_python.module.mrte_model import MRTE
-from gpt_sovitsV2_python.gpt_sovits_python.module.quantize import ResidualVectorQuantizer
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols
+from gpt_sovits_python.module.commons import init_weights, get_padding
+from gpt_sovits_python.module.mrte_model import MRTE
+from gpt_sovits_python.module.quantize import ResidualVectorQuantizer
+from gpt_sovits_python.text import symbols
 from torch.cuda.amp import autocast
 import contextlib
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols as symbols_v1
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols2 as symbols_v2
+from gpt_sovits_python.text import symbols as symbols_v1
+from gpt_sovits_python.text import symbols2 as symbols_v2
 
 class StochasticDurationPredictor(nn.Module):
     def __init__(

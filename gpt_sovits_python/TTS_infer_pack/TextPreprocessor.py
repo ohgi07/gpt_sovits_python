@@ -1,4 +1,3 @@
-
 import os, sys
 
 from tqdm import tqdm
@@ -8,15 +7,15 @@ sys.path.append(now_dir)
 import re
 import torch
 import LangSegment
-from gpt_sovitsV2_python.gpt_sovits_python.text import chinese
+from gpt_sovits_python.text import chinese
 from typing import Dict, List, Tuple
-from gpt_sovitsV2_python.gpt_sovits_python.text import cleaned_text_to_sequence as text_to_sequence
+from gpt_sovits_python.text import cleaned_text_to_sequence as text_to_sequence
 from transformers import AutoModelForMaskedLM, AutoTokenizer
-from gpt_sovitsV2_python.gpt_sovits_python.TTS_infer_pack.text_segmentation_method import split_big_text, get_method as get_seg_method
+from gpt_sovits_python.TTS_infer_pack.text_segmentation_method import split_big_text, get_method as get_seg_method
 import logging
-from gpt_sovitsV2_python.tools.i18n.i18n import I18nAuto, scan_language_list
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols as symbols_v1
-from gpt_sovitsV2_python.gpt_sovits_python.text import symbols2 as symbols_v2
+from tools.i18n.i18n import I18nAuto, scan_language_list
+from gpt_sovits_python.text import symbols as symbols_v1
+from gpt_sovits_python.text import symbols2 as symbols_v2
 splits = {"，", "。", "？", "！", ",", ".", "?", "!", "~", ":", "：", "—", "…", }
 language=os.environ.get("language","Auto")
 language=sys.argv[-1] if sys.argv[-1] in scan_language_list() else language
@@ -44,7 +43,7 @@ def clean_special(text, language, special_s, target_symbol, version=None):
     特殊静音段sp符号处理
     """
     text = text.replace(special_s, ",")
-    language_module = __import__("gpt_sovitsV2_python.gpt_sovits_python.text."+language_module_map[language],fromlist=[language_module_map[language]])
+    language_module = __import__("gpt_sovits_python.text."+language_module_map[language],fromlist=[language_module_map[language]])
     norm_text = language_module.text_normalize(text)
     phones = language_module.g2p(norm_text)
     new_ph = []
@@ -83,7 +82,7 @@ def clean_text(text, language, version=None):
     
     # Import the correct language module
     language_module = __import__(
-        "gpt_sovitsV2_python.gpt_sovits_python.text." + language_module_map[language],
+        "gpt_sovits_python.text." + language_module_map[language],
         fromlist=[language_module_map[language]]
     )
     

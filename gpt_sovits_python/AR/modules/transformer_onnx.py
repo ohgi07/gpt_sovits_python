@@ -10,8 +10,8 @@ from typing import Tuple
 from typing import Union
 
 import torch
-from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.activation_onnx import MultiheadAttention
-from gpt_sovitsV2_python.gpt_sovits_python.AR.modules.scaling import BalancedDoubleSwish
+from gpt_sovits_python.AR.modules.activation_onnx import MultiheadAttention
+from gpt_sovits_python.AR.modules.scaling import BalancedDoubleSwish
 from torch import nn
 from torch import Tensor
 from torch.nn import functional as F

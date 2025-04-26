@@ -3,8 +3,8 @@ import torch
 from torch import nn
 from torch.nn import functional as F
 
-from gpt_sovitsV2_python.gpt_sovits_python.module import commons
-from gpt_sovitsV2_python.gpt_sovits_python.module.modules import LayerNorm
+from gpt_sovits_python.module import commons
+from gpt_sovits_python.module.modules import LayerNorm
 
 
 class Encoder(nn.Module):
